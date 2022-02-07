@@ -1,4 +1,4 @@
-import { arrCards } from "/js/main.js";
+import { arrCards } from "./main.js";
 export  { 
 	createElement, insertElement , showViewCard , renderBtn, renderCountBox
 };

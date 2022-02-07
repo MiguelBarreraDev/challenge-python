@@ -1,11 +1,11 @@
 import {
 	createElement, insertElement , showViewCard, renderBtn, renderCountBox
-} from "/js/components.js";
+} from "./components.js";
 export { arrCards };
 
 const btnPrev = document.getElementById("btn-prev"),
 	btnNext = document.getElementById("btn-next");
-let arrCards = await fetch("/js/cards.json")
+let arrCards = await fetch("./cards.json")
 	.then(res => res.json());
 
 /*****************************************/
