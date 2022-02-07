@@ -1,0 +1,12 @@
+{
+  "name": "challenge-python",
+  "version": "1.0.0",
+  "description": "project with an educational purpose, consisting of tests (questions/answers) that force the user to evoke information. Includes healthy competition and promotes the good use of free time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["test", "challenge", "Holberton"],
+  "author": "MiguelBarreraDev",
+  "license": "ISC"
+}
