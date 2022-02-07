@@ -5,8 +5,11 @@ export { arrCards };
 
 const btnPrev = document.getElementById("btn-prev"),
 	btnNext = document.getElementById("btn-next");
-let arrCards = await fetch("./cards.json")
-	.then(res => res.json());
+let arrCards = await fetch("https://raw.githubusercontent.com/MiguelBarreraDev/challenge-python/main/js/cards.json", {
+	"content-type": "application/json",
+})
+	.then(res => res.json())
+console.log(arrCards);
 
 /*****************************************/
 /* Anonime function to show the first view
