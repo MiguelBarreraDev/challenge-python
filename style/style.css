@@ -1,0 +1,201 @@
+:root {
+	--clr-bg: rgb(117, 199, 255);
+	--clr-bg-primary: rgba(25, 25, 25, 1);
+	--clr-bg-secundary: rgba(16, 16, 16, 1);
+	--clr-secundary: rgba(82, 85, 88, .8);
+	--clr-primary-text: rgba(255, 191, 117, 1);
+}
+
+* {
+	padding: 0;
+	font-family: monospace;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+}
+
+.body {
+	position: relative;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background-color: var(--clr-bg-secundary);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*=====================*/
+/* Style for background
+/*=====================*/
+.ctn-img_bg {
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	height: 50vh;
+	max-width: 1000px;
+	width: 70%;
+	bottom: 0;
+	z-index: -1;
+}
+
+.ctn-img_bg .img_bg {
+	display: block;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	opacity: .3;
+}
+
+/*==========================*/
+/* Styles for header - start
+/*==========================*/
+.header {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	border-radius: 10px;
+	background-color: var(--clr-secundary);
+	display: flex;
+	justify-content: center;
+}
+
+.header .title {
+	margin: 0;
+	font-size: 2.3em;
+	color: var(--clr-primary-text);
+}
+
+/*=========================================================*/
+/* Styles for main (box of questions and responses) - start
+/*=========================================================*/
+.main {
+	display: block;
+	position: relative;
+	max-width: 1000px;
+	width: 70%;
+	height: 282px;
+	margin: 50px 0;
+}
+.count-box {
+	display: block;
+	padding: 0 20px;
+	text-align: right;
+	color: #fff;
+	font-size: 1.3em;
+}
+.ctn-box .box {
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	padding: 10px 20px;
+	/*background-color: var(--clr-secundary);*/
+}
+.ctn-box .box-question,
+.ctn-box .box-response {
+	display: block;
+	width: 100%;
+	padding: 5px;
+}
+
+.ctn-box .box-question {
+	display: block;
+	color: #fff;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 2em;
+}
+
+.ctn-box .box-response .res {
+	display: block;
+	margin: 10px 0;
+	padding: 10px 15px;
+	border-radius: 10px;
+	background-color: rgba(255, 191, 117, 1);
+	color: #000;
+	font-size: 1.3em;
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+.ctn-box .box-response .res:hover {
+	transition: background-color .2s linear;
+	background-color: rgba(255, 191, 117, .85);
+}
+.ctn-box .box-response .res:focus {
+	background-color: #f7d2a7;
+	outline: none;
+}
+
+/*==========================*/
+/*Styles for handler - start
+/*==========================*/
+.handler {
+	box-sizing: border-box;
+	display: flex;
+	max-width: 1000px;
+	width: 70%;
+	padding: 0px 20px;
+	justify-content: space-between;
+}
+
+.handler .btn {
+	display: block;
+	font-size: 1.7em;
+	/*border-bottom: 1px solid #fff;*/
+	width: 40%;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	transition: all .2s linear;
+	padding: 5px 0;
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px #fff;
+	backdrop-filter: blur(10px);
+}
+.handler .btn:active {
+	opacity: .8;
+}
+.handler .btn.btn-finish {
+	width: 100%;
+}
+
+.handler .btn.btn-next:hover {
+	color: #121212;
+	background-color: rgba(250, 127, 142, 1);
+}
+
+.handler .btn.btn-prev:hover {
+	color: #121212;
+	background-color: rgba(117, 199, 255, 1);
+}
+.handler .btn.btn-finish:hover {
+	color: #121212;
+	background: linear-gradient(to right, rgba(117, 199, 255, 1), rgba(250, 127, 142, 1));
+}
+/*==========================*/
+/* Clas for Animation
+/*==========================*/
+.hidden {
+	visibility: hidden;
+}
+.show {
+	animation-name: show;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	visibility: visible;
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
