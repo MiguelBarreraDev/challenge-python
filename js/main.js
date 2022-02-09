@@ -1,15 +1,15 @@
+import { $id, $slc } from './tricks.js';
 import {
 	createElement, insertElement , showViewCard, renderBtn, renderCountBox
 } from "./components.js";
 export { arrCards };
 
-const btnPrev = document.getElementById("btn-prev"),
-	btnNext = document.getElementById("btn-next");
-let arrCards = await fetch("https://raw.githubusercontent.com/MiguelBarreraDev/challenge-python/main/js/cards.json", {
-	"content-type": "application/json",
-})
-	.then(res => res.json())
-console.log(arrCards);
+const btnPrev = $id("btn-prev"),
+	btnNext = $id("btn-next");
+let request = await fetch("http://172.21.213.228:3001/cards");
+let arrCards = await request.json();
+
+/* console.log(arrCards); */
 
 /*****************************************/
 /* Anonime function to show the first view
