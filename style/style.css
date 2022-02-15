@@ -115,8 +115,9 @@ a {
 	margin: 10px 0;
 	padding: 10px 15px;
 	border-radius: 10px;
-	background-color: rgba(255, 191, 117, 1);
-	color: #000;
+	/*background-color: rgba(255, 191, 117, 1);*/
+	color: #fff;
+	border: 1px solid #fffa;
 	font-size: 1.3em;
 	font-weight: bolder;
 	cursor: pointer;
@@ -125,10 +126,12 @@ a {
 .ctn-box .box-response .res:hover {
 	transition: background-color .2s linear;
 	background-color: rgba(255, 191, 117, .85);
+	color: #000;
 }
 .ctn-box .box-response .res:focus {
 	background-color: #f7d2a7;
 	outline: none;
+	color: #000;
 }
 
 /*==========================*/
