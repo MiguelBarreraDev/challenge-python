@@ -6,7 +6,7 @@ export { arrCards };
 
 const btnPrev = $id("btn-prev"),
 	btnNext = $id("btn-next");
-let request = await fetch("http://172.21.213.228:3001/cards");
+let request = await fetch("https://raw.githubusercontent.com/MiguelBarreraDev/challenge-python/main/js/cards.json");
 let arrCards = await request.json();
 
 /* console.log(arrCards); */
