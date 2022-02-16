@@ -51,7 +51,7 @@
 	},
 	{
 		"id": "5",
-		"question": ">>> a = 89\n>>> b = a\n>>> print(a is b)",
+		"question": ">>> a = 89\n>>> b = 89\n>>> print(a is b)",
 		"response": {
 			"a": "True, because both are worth 89",
 			"b": "False, because 'is' compare objects and not values",
